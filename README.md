@@ -11,7 +11,7 @@ This README.md file was created on 2021-04-21 by Lisa Watkins.<br>
 
 **Brief Dataset Description**
 
-This repository was created to provide access to the data collected in the field and across the literature, as well as the analysis code, used for the paper by Watkins et al. titled, *Sampling method affects measured microplastic concentration: a meta-analysis* (in peer review, with preprint freely available at: _____).<br>
+This repository was created to provide access to the data collected in the field and across the literature, as well as the analysis code, used for the paper by Watkins et al. titled, *Sampling method affects measured microplastic concentration: a meta-analysis* published in [Environmental Science & Technology](https://doi.org/10.1021/acs.est.1c03019).<br>
 These Literature review data may contain errors. I encourage you to use the tables in `corestudies` and `pairedstudies` as references, and refer to the original papers, linked for each row, for reputable, error-free data.
 
 **Dataset Contact Information**<br>
@@ -47,7 +47,7 @@ As of 2021-04-21 there are no other publications that cite or use these data.<br
 
 **Links to other publicly accessible locations of the data**<br>
 
-These data and the associated code are available at https://github.com/ltw35/microplastic-methods-metaanalysis. The associated publication is under peer review, but a pre-print (not yet peer reviewed) is available in the Earth ArXiv (preprint: ____________).<br>
+These data and the associated code are available at https://github.com/ltw35/microplastic-methods-metaanalysis. The associated publication is available in [Environmental Science and Technology](https://doi.org/10.1021/acs.est.1c03019). Please get in touch if you have trouble accessing the full-text. I am happy to share a copy directly.<br>
 
 **Links/relationships to ancillary data**<br>
 
@@ -73,7 +73,7 @@ The recommended citation for these data and the code is available in [CITATION.m
 
 **Paper Availability**<br>
 
-The paper associated with these data and the code is currently under peer review. A freely available preprint of the manuscript can be found on Earth ArXiv: _________________
+The paper associated with these data and the code is available from [Environmental Science and Technology](https://doi.org/10.1021/acs.est.1c03019). Please get in touch if you have trouble accessing the full-text. I am happy to share a copy directly.<br>
 
 ## Methodological Information ##
 
