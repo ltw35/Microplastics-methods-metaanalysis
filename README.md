@@ -127,6 +127,7 @@ The main directory contains the following sub-directory:
 **Relationship Between Files**<br>
 
 The two code files are run independely, in any order. `what_affects_concentration.R` inputs `corestudies` data file. `paired_studies.R` inputs `pairedstudies` datafile.<br>
+The other data file `data_fieldsamples` contains the paired samples collected by Lisa Watkins specifically for this study. The average values show up in both `corestudies` and `pairedstudies` as "This study" or "Watkins et al." `data_fieldsamples` does not get utilized in any of the R scripts.
 
 ### 2. data directory ###
 
@@ -146,6 +147,7 @@ Number of columns: 32
 Number of rows: 
 
 **Variable list**<br>
+* Omit: 0 if entry complete enough and used in analysis, x or ? if entry is incomplete or does not meet literature inclusion criteria for analysis
 * Author_date: First author & date of study
 * doi: DOI link to the row's study
 * earliestyear_sampled: For studies that provide dates for when samples are collected, this column includes the year when first samples of the study were collected. For studies where sampling dates could not be found, this lack of data is designated by "nd".
@@ -163,9 +165,14 @@ Number of rows:
 * Csd.L: Standard deviation of reported concentration, in units of particles per L. For studies where a standard deviation on average concentration could not be found or easily calculated, "nd" is used.
 * num_samples: The number of samples collected. This value would indicate the number of values included in average concentration (Cavg.L) and average volume (vol_L). For some studies, the number of samples for different methods or locations is difficult to discern, but we have done our best to enter the best guess. "nd" is used for studies where number of samples was not found.
 * total_particles_collected: The number of particles counted overall in the analyzed samples. For some studies, the number of particles for different methods or locations is difficult to discern, but we have done our best to enter the best guess. "nd" is used for studies where number of samples was not found.
+* separation: Lists chemical or physical separation technique noted in paper's methods
+* primary_id: type of microscope or method used for first past particle selection or identification
 * secondary_id: The second (or most advanced) method or apparatus used to confirm a particle is plastic and should be included in the sample count, in addition to or in place of a visual inspection.
+* highest_id: most advanced identification method used when choosing to include suspected particle in final counts
+* no_particles_secondary: if noted in manuscript, the number of particles included in the secondary analysis method
 * top_shape: The dominant particle type detected in the sample (options: fiber, fragment, bead [includes pellet-type], film, foam). "nd" indicates mention of most prominant particle type was not found in the paper. 
 * excluded_particles: Notes whether a certain particle type was omited from all counts in the study.
+* validation_rate: if noted in manuscript, the percent of particles assessed by secondary identification method that were confirmed to be plastic
 * topsize_bottom_mm: The lower bound of the most common size range of particles, in units of mm.
 * topsize_upper_mm: The upper bound of the most common size range of particles, in units of mm.
 * top_polymer: The most common polymer type identified.
@@ -178,8 +185,60 @@ Number of rows:
 * waterblanks: The number of procedural blanks run for a given sample. 0 indicates no mention of blanks were found in the paper.
 * airblanks: The number of blanks meant to measure potential contamination from lab air by leaving samples exposed. 0 indicates no mention of blanks were found in the paper.
 * blanks_subtracted: An indication in the methods or results of whether reported concentrations are corrected by subtracting any blank sample measurements from the sample counts. (options: yes [concentrations corrected by blanks], no [concentrations not corrected by blanks], unknown [no mention of a correction], some [imprecise explanation of whether correction has been or should be made]).
+* comment: Notes from Lisa Watkins about the methods, entries selected during data entry, or questions regarding the manuscript
+
+## Data-Specific Information For: `*data_fieldsamples`
+
+**Number of columns/variables**
+
+Number of columns: 12
+
+**Number of rows**
+
+Number of rows: 8
+
+**Variable list**<br>
+* samplegroup: identification label for pair of samples collected at same location on same day. The label is 2-initial location code for the river, an underscore, and the month and day of collection.
+* lat: latitude of sampling location
+* long: longitude of sampling location
+* sample_date: date of sampling
+* grab_volumesampled_m3: water volume collected for grab sample, in cubic meters
+* net_volumesampled_m3: water volume that passed through net sample, in cubic meters
+* grab_conc_total.m3_minuscontam:
+* net_conc_total.m3_minuscontam:
+* velocity_m.s:
+* meshsize_mm:
+* mostcommon_particletype_grab:
+* mostcommon_particletype_net:
+
+## Data-Specific Information For: `*pairedstudies`
+
+**Number of columns/variables**
+
+Number of columns: 15
+
+**Number of rows**
+
+Number of rows: 450
+
+**Variable list**<br>
+* omit:
+* study:
+* doi:
+* location:
+* study_type:
+* source:
+* sample_num:
+* method:
+* mesh_mm:
+* vol_L:
+* Cavg.L:
+* contam_numpersample_avg:
+* comment:
+* conc_L_samemeshsize:
+* contam_numpersample_avg:
 
 
 **Missing data codes**<br>
 
-When no information could be found in the publication, supplementary materials, or linked data (though possibly just overlooked!), "no data" is designated in the tables by "nd".
+When no information could be found in the publication, supplementary materials, or linked data (though possibly just overlooked!), or was otherwise excluded because the entry was clearly not to end up in final analysis, "no data" is designated with a blank cell.
