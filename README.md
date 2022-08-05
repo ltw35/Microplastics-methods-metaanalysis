@@ -204,12 +204,12 @@ Number of rows: 8
 * sample_date: date of sampling
 * grab_volumesampled_m3: water volume collected for grab sample, in cubic meters
 * net_volumesampled_m3: water volume that passed through net sample, in cubic meters
-* grab_conc_total.m3_minuscontam:
-* net_conc_total.m3_minuscontam:
-* velocity_m.s:
-* meshsize_mm:
-* mostcommon_particletype_grab:
-* mostcommon_particletype_net:
+* grab_conc_total.m3_minuscontam: Concentration of grab sample, after subtracting the average number of contaminating particles per sample (as measured in air and procedural blanks), in particles per cubic meter
+* net_conc_total.m3_minuscontam: Concentration of net sample, after subtracting the average number of contaminating particles per sample (as measured in air and procedural blanks), in particles per cubic meter
+* velocity_m.s: River velocity at mouth of net, in meters per second
+* meshsize_mm: Net mesh size or filtration size used for grab samples, in millimeters
+* mostcommon_particletype_grab: Most common type of particle found in grab sample. Options "fragment", "fiber", "film", "bead/pellet"
+* mostcommon_particletype_net: Most common type of particle found in net sample. Options "fragment", "fiber", "film", "bead/pellet"
 
 ## Data-Specific Information For: `*pairedstudies`
 
@@ -222,21 +222,20 @@ Number of columns: 15
 Number of rows: 450
 
 **Variable list**<br>
-* omit:
-* study:
-* doi:
-* location:
-* study_type:
-* source:
-* sample_num:
-* method:
-* mesh_mm:
-* vol_L:
-* Cavg.L:
-* contam_numpersample_avg:
-* comment:
-* conc_L_samemeshsize:
-* contam_numpersample_avg:
+* omit: 0 if entry is complete and meets literature review criteria (set by Lisa Watkins). x or ? if it should be filtered out and not included in analysis.
+* study: Author and date of study as published
+* doi: DOI of associated paper
+* location: type of waterbody sampled
+* study_type: type of methods being paired in study. Options are "mesh compare" (two samples from same time/place, filtered through different sized mesh), "grab-grab" (two samples from same time/place, both sampled by grab to compare inter-sample variability), "grab-net" (one grab sample, one net sample taken from same time/place), "net-pump" (one net sample, one pumped sample, collected from same time/place).
+* source: Table, page, or section number from DOI where Lisa Watkins transcribed the data from.
+* sample_num: Sample identifier as listed in DOI study
+* method: The sample collection method used to collect the sample described in that row
+* mesh_mm: smallest mesh or filter used to separate the sample from water.
+* vol_L: Sample volume collected, in liters
+* Cavg.L: Plastic concentration reported from that sample, in particles per liter
+* contam_numpersample_avg: Average number of particles of contamination found in all blank samples run in association with the given study or sample (whichever is more specific to the given sample), if reported.
+* comment: Notes written by Lisa Watkins when transcribing this data, about data sources, methods, or other details. Not comprehensive or standardized.
+* conc_L_samemeshsize: Plastic concentration, in particles per liter, of the paired sample, when accounting only for the same particle size range as available for the other sample in the pair, when available.
 
 
 **Missing data codes**<br>
