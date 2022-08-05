@@ -1,0 +1,1 @@
+Watkins L, Sullivan PJ, Walter MT. (2021). What you net depends on if you grab: A meta-analysis of sampling method's impact on measured aquatic microplastic concentration. *Environmental Science and Technology*, 55(19), 12930-12942. DOI: [10.1021/acs.est.1c03019](https://doi.org/10.1021/acs.est.1c03019)
