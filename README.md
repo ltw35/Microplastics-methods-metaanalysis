@@ -1,5 +1,5 @@
 # microplastic-methods-metaanalysis
-Data and code repository for the meta-analysis paper titled *Sampling method affects measured microplastic concentration: a meta-analysis*<br>
+Data and code repository for the meta-analysis paper titled *What You Net Depends on if You Grab: A Meta-analysis of Sampling Method’s Impact on Measured Aquatic Microplastic Concentration*<br>
 
 This README.md file was created on 2021-04-21 by Lisa Watkins.<br>
 
@@ -11,7 +11,7 @@ This README.md file was created on 2021-04-21 by Lisa Watkins.<br>
 
 **Brief Dataset Description**
 
-This repository was created to provide access to the data collected in the field and across the literature, as well as the analysis code, used for the paper by Watkins et al. titled, *Sampling method affects measured microplastic concentration: a meta-analysis* published in [Environmental Science & Technology](https://doi.org/10.1021/acs.est.1c03019).<br>
+This repository was created to provide access to the data collected in the field and across the literature, as well as the analysis code, used for the paper by Watkins et al. titled, *What You Net Depends on if You Grab: A Meta-analysis of Sampling Method’s Impact on Measured Aquatic Microplastic Concentration* published in [Environmental Science & Technology](https://doi.org/10.1021/acs.est.1c03019).<br>
 These Literature review data may contain errors. I encourage you to use the tables in `corestudies` and `pairedstudies` as references, and refer to the original papers, linked for each row, for reputable, error-free data.
 
 **Dataset Contact Information**<br>
